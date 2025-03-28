@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <h1>Welcome, Personal Member!.</h1>
+    <h1>Welcome, <?php echo $full_name; ?>  Personal Member!.</h1>
 
 </body>
 </html>

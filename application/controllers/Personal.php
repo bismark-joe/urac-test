@@ -11,7 +11,8 @@ class Personal extends CI_Controller {
 
     function index() {
         if ($this->session->userdata('level')=== '3') {
-            $this->load->view('personal_view');
+            $data = $this->session->userdata();
+            $this->load->view('personal_view', $data);
         } else {
             echo "Access Denied! for P";
         }

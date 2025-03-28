@@ -8,17 +8,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<style type="text/css">
 
-		::selection { background-color: #E13300; color: white; }
-		::-moz-selection { background-color: #E13300; color: white; }
-		
+	::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
+
 	body {
 		background-color: #fff;
 		margin: 40px;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #4F5155;
-		align-items: center;
-		justify-content: center;
-		display: flexbox;
 	}
 
 	a {
@@ -54,16 +51,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 	#body {
-		width: 500px;
-		height: 400px;
+		margin: 0 15px 0 15px;
 		min-height: 96px;
 	}
-	
+
 	p {
 		margin: 0 0 10px;
 		padding:0;
 	}
-	
+
 	p.footer {
 		text-align: right;
 		font-size: 11px;
@@ -72,52 +68,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-	
+
 	#container {
-		margin-right: auto;
-		margin-left: auto;
-		width:	500px;
-		height: 420px;
+		margin: 10px;
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
-	}
-	label {
-		font-size: 20px;
-		padding-left: 20px;
-	}
-	.text-input {
-		width: 60%;
-		height: 30px;
-		border-radius: 10px;
-		padding-left: 20px;
-		font-size: 18px
-	}
-	input[type=submit] {
-		width: auto;
-		height: 30px;
-		float: right;
-		margin-right: 60px;
-		border-style: none;
-		background: #aaa;
-		font-size: 18px;
-		border-radius: 4px;
 	}
 	</style>
 </head>
 <body>
 
 <div id="container">
-	<h1>LOGIN PAGE </h1>
+	<h1>Welcome to CodeIgniter!</h1>
 
-	<form id="body" action="signup.php" method="post">
-		<br> <br>
-		<label for="uname"> Username: </label>
-		<input type="text" class="text-input"> <br> <br><br>
-		<label for="uname"> Password: </label>
-		<input type="password" class="text-input"><br> <br><br>
-		<input type="submit" value="Submit"> <br><br>
+	<div id="body">
+		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
-	</form>
+		<p>If you would like to edit this page you'll find it located at:</p>
+		<code>application/views/welcome_message.php</code>
+
+		<p>The corresponding controller for this page is found at:</p>
+		<code>application/controllers/Welcome.php</code>
+
+		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="userguide3/">User Guide</a>.</p>
+	</div>
+
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+</div>
 
 </body>
 </html>

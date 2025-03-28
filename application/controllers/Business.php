@@ -10,9 +10,9 @@ class Business extends CI_Controller {
     }
 
     function index() {
-        if ($this->session->userdata('level')=== '2') {
-            
-            $this->load->view('business_view');
+        if ($this->session->userdata('role')=== '2') {
+            $data = $this->session->userdata();
+            $this->load->view('business_view', $data);
         } else {
             echo "Access Denied!";
         }

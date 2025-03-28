@@ -13,31 +13,14 @@ class Signup_model extends CI_Model { #this is what handle the data structure as
 		$password =  md5($this->input->post('password', TRUE));
 		$email =     $this->input->post('email', TRUE);
 		$role =      $this->input->post('role', TRUE);
-        if ($role = 'Admin') {
-            $level = '1';
-        }elseif ($role = 'Personal') {
-            $level = '2';
-        }elseif ($role = 'Business') {
-            $level = '3';
-        }
+       
 		
-        
-		// $response = $this->Signup_model->validate_inputs($username, $password);
-        // $data = array(
-        //     'full_name' => 'Ojo mary',
-        //     'username' => 'ojomary',
-        //     'email' => 'ojomary@gmail.com',
-        //     'role' => 'Personal',
-        //     'level' => '3',
-        //     'logged_in' => TRUE
-        // );
         $data = array(
             'full_name' => $full_name,
             'username' => $username,
             'password' => $password,
             'email' => $email,
             'role' => $role,
-            'level' => $level,
         );
 
         $this->db->insert('users_tbl', $data);

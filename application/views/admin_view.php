@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <h1>Welcome, Admin Member!.</h1>
+    <h1>Welcome, <?php echo $full_name; ?> You are an Admin Member!.</h1>
 
 </body>
 </html>

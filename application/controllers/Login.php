@@ -24,23 +24,24 @@ class Login extends CI_Controller {
 			$username = $data['username'];
 			$email = $data['email'];
 			$role = $data['role'];
-			$level = $data['level'];
 
 			$sessdata = array(
 				'full_name' => $full_name,
 				'username' => $username,
 				'email' => $email,
 				'role' => $role,
-				'level' => $level,
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sessdata);
-			if ($level === "1") {
+			if ($role == "1") {
 				redirect('Admin');
-			} elseif ($level === "2"){
+			} elseif ($role == "2"){
 				redirect('Business');
-			}else {
+			}elseif ($role == "3") {
 				redirect('Personal');
+			}
+			else {
+				echo "<script>alert('Access denied! Wrong input');history.go(-1)</script>";
 			}
 		}else {
 			echo "<script>alert('Access denied! Wrong input');history.go(-1)</script>";

@@ -121,10 +121,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<input name="email" type="email" class="text-input"><br> <br><br>
 		<label for="role"> Role: </label>
 		<select name="role" id="role">
-			<option value="None">None</option>
-			<option value="Admin">Admin</option>
-			<option value="Personal">Personal</option>
-			<option value="Business">Business</option>
+			<option value="0">None</option>
+			<option value="1">Admin</option>
+			<option value="2">Personal</option>
+			<option value="3">Business</option>
 		</select>
 		<input type="submit" value="Submit"> <br><br>
 
